@@ -1,0 +1,227 @@
+@use "reset.scss";
+
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+//screen-sizes
+$screen-md-min: 768px;
+$screen-lg-min: 1280px;
+
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+//colors
+$l-green: #4bd573;
+$m-green: #152d1c;
+$d-green: #011908;
+
+//general
+::selection {
+  background: $l-green;
+  color: $m-green;
+}
+
+body {
+  background-color: #242424;
+  color: #888888;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: always;
+  -moz-osx-font-smoothing: always;
+  --spacer: 1rem;
+  a {
+    color: #888888;
+  }
+  @include md {
+    --spacer: 1.4rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include md {
+    justify-content: start;
+  }
+  @include lg {
+    height: 100%;
+  }
+}
+
+.container {
+  padding: var(--spacer);
+  margin: 0 auto;
+  max-width: $screen-lg-min;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+  @include md {
+    flex-direction: row;
+    max-width: $screen-lg-min;
+  }
+}
+
+//header
+.main-header {
+  background-color: #2c2c2c;
+  img {
+    margin: 0 auto;
+    max-height: 30px;
+  }
+}
+
+//player
+.ads {
+  height: auto;
+  margin-top: var(--spacer);
+  max-height: 240px;
+  object-fit: cover;
+  width: 100%;
+  img {
+    border-radius: var(--size-1);
+  }
+}
+
+.player {
+  background-color: #2c2c2c;
+  border-radius: var(--size-1);
+  padding: var(--spacer);
+  padding-bottom: 0;
+  width: 100%;
+  img {
+    border-radius: var(--size-1);
+  }
+  .court-title {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      color: $l-green;
+      font-size: var(--size-4);
+      font-weight: 700;
+      padding: 1rem 0;
+      text-transform: uppercase;
+    }
+    .share-icon {
+      align-items: center;
+      background-color: #242424;
+      border-radius: var(--size-1);
+      cursor: pointer;
+      display: flex;
+      height: 40px;
+      width: 40px;
+      padding: 0;
+      margin: 0;
+      transition: all 0.2s ease;
+    }
+    .share-icon:hover {
+      background-color: $l-green;
+    }
+  }
+}
+
+//navigation
+.navigation {
+  border-top: 1px solid #2c2c2c;
+
+  ul {
+    display: grid;
+    gap: var(--spacer);
+    grid-auto-flow: column;
+    grid-auto-columns: 66%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    padding: var(--spacer);
+    scroll-padding-inline: var(--spacer);
+    scroll-snap-type: x mandatory;
+    li {
+      background-color: #2c2c2c;
+
+      border-radius: var(--size-1);
+      display: grid;
+      gap: var(--spacer);
+      grid-template-rows: min-content;
+      padding: var(--spacer);
+      scroll-snap-align: start;
+      img {
+        aspect-ratio: 16/ 9;
+        border-radius: var(--size-1);
+        inline-size: 100%;
+        object-fit: cover;
+        transition: all 0.5s ease;
+      }
+      h3 {
+        margin-top: var(--spacer);
+        transition: all 0.3s ease;
+      }
+      a,
+      a:visited {
+        font-size: var(--size-3);
+        font-weight: 700;
+        text-align: left;
+        text-transform: uppercase;
+      }
+      a:hover,
+      a:active {
+        text-decoration: none;
+        img {
+          outline: 4px solid $l-green;
+        }
+        h3 {
+          color: $l-green;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.active {
+  img {
+    outline: 4px solid $l-green;
+  }
+  h3 {
+    color: $l-green;
+    text-decoration: none;
+  }
+}
+
+@include md {
+  .navigation {
+    border-top: none;
+    border-left: 1px solid #2c2c2c;
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      li {
+        width: 21vw;
+      }
+    }
+  }
+}
