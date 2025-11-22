@@ -9,11 +9,14 @@ const Content = ({ props }) => {
   for (const court of courts) {
     if (court.id === currentCourtId) {
       currentCourt = court;
-      break;
     }
   }
 
-  const playerRef = null;
+  if (!currentCourt) {
+    currentCourt = courts[0];
+  }
+
+  const playerRef = {};
 
   const videoJsOptions = {
     autoplay: true,
