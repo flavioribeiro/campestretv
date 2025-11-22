@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShareNodes } from "@fortawesome/free-solid-svg-icons";
-
+import { Player } from "../components/player";
 import courts from "../assets/data/courts";
 
 const Content = ({ props }) => {
@@ -13,11 +13,37 @@ const Content = ({ props }) => {
     }
   }
 
+  const playerRef = null;
+
+  const videoJsOptions = {
+    autoplay: true,
+    controls: true,
+    responsive: true,
+    fluid: true,
+    sources: [{
+      src: currentCourt.url
+    }]
+  };
+
+  const handlePlayerReady = (player) => {
+    playerRef.current = player;
+
+    // You can handle player events here, for example:
+    player.on('waiting', () => {
+      videojs.log('player is waiting');
+    });
+
+    player.on('dispose', () => {
+      videojs.log('player will dispose');
+    });
+  };
+
+
   return (
     <div className="main-content">
       <div className="container">
         <div className="player">
-          <img src={currentCourt.url} />
+          <Player options={videoJsOptions} onReady={handlePlayerReady} />
           <div className="court-title">
             <h1>Quadra {currentCourt.id}</h1>
             <div className="share-icon">

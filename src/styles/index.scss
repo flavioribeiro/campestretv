@@ -95,27 +95,24 @@ html {
   }
 }
 
-//player
-.ads {
-  height: auto;
-  margin-top: var(--spacer);
-  max-height: 240px;
-  object-fit: cover;
-  width: 100%;
-  img {
-    border-radius: var(--size-1);
-  }
-}
-
 .player {
   background-color: #2c2c2c;
   border-radius: var(--size-1);
   padding: var(--spacer);
   padding-bottom: 0;
-  width: 100%;
+  width: 720px;
   img {
     border-radius: var(--size-1);
   }
+
+  .vjs-big-play-button {
+    display: none;
+  }
+
+  .vjs-subs-caps-button {
+    display: none;
+  }
+
   .court-title {
     align-items: center;
     display: flex;
