@@ -22,7 +22,9 @@ const Content = ({ props }) => {
     autoplay: true,
     controls: true,
     responsive: true,
+    breakpoints: true,
     fluid: true,
+    fill: true,
     sources: [{
       src: currentCourt.url
     }]
