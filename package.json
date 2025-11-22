@@ -21,7 +21,9 @@
     "react-router-dom": "^7.6.3",
     "reactjs-localstorage": "^1.0.1",
     "reset-css": "^5.0.2",
-    "sass": "^1.89.2"
+    "sass": "^1.89.2",
+    "video.js": "^8.23.4",
+    "videojs": "^1.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
