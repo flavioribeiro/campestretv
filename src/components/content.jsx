@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShareNodes } from "@fortawesome/free-solid-svg-icons";
 
 import courts from "../assets/data/courts";
-import ads from "../assets/img/ads-img.jpg";
 
 const Content = ({ props }) => {
   const currentCourtId = props;
@@ -27,9 +26,6 @@ const Content = ({ props }) => {
               </a>
             </div>
           </div>
-        </div>
-        <div className="ads">
-          <img src={ads} />
         </div>
       </div>
     </div>
