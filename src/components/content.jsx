@@ -19,10 +19,10 @@ const Content = ({ props }) => {
   const playerRef = {};
 
   const videoJsOptions = {
-    autoplay: true,
     controls: true,
     responsive: true,
     breakpoints: true,
+    autoplay: "muted",
     fluid: true,
     fill: true,
     sources: [{
@@ -32,15 +32,6 @@ const Content = ({ props }) => {
 
   const handlePlayerReady = (player) => {
     playerRef.current = player;
-
-    // You can handle player events here, for example:
-    player.on('waiting', () => {
-      videojs.log('player is waiting');
-    });
-
-    player.on('dispose', () => {
-      videojs.log('player will dispose');
-    });
   };
 
 
