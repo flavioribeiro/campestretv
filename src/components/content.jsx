@@ -5,13 +5,10 @@ import courts from "../assets/data/courts";
 import ads from "../assets/img/ads-img.jpg";
 
 const Content = ({ props }) => {
-  console.log(props, courts);
   const currentCourtId = props;
   let currentCourt = null;
   for (const court of courts) {
-    console.log("checking court", court.id, currentCourtId);
     if (court.id === currentCourtId) {
-      console.log("found current court", court);
       currentCourt = court;
       break;
     }
