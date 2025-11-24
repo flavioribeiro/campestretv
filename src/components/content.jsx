@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShareNodes } from "@fortawesome/free-solid-svg-icons";
-import { Player } from "../components/player";
 import courts from "../assets/data/courts";
 
 const Content = ({ props }) => {
@@ -16,30 +15,16 @@ const Content = ({ props }) => {
     currentCourt = courts[0];
   }
 
-  const playerRef = {};
-
-  const videoJsOptions = {
-    controls: true,
-    responsive: true,
-    breakpoints: true,
-    autoplay: "muted",
-    fluid: true,
-    fill: true,
-    sources: [{
-      src: currentCourt.url
-    }]
-  };
-
-  const handlePlayerReady = (player) => {
-    playerRef.current = player;
-  };
-
-
   return (
     <div className="main-content">
       <div className="container">
         <div className="player">
-          <Player options={videoJsOptions} onReady={handlePlayerReady} />
+        <iframe 
+          src={currentCourt.url}
+          title="YouTube video player" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen></iframe>
           <div className="court-title">
             <h1>Quadra {currentCourt.id}</h1>
             <div className="share-icon">

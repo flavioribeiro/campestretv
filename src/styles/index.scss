@@ -104,17 +104,15 @@ html {
   border-radius: var(--size-1);
   padding: var(--spacer);
   padding-bottom: 0;
-  width: 100%;
+  overflow: hidden;
+
   img {
     border-radius: var(--size-1);
   }
 
-  .vjs-big-play-button {
-    display: none;
-  }
-
-  .vjs-subs-caps-button {
-    display: none;
+  iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
   }
 
   .court-title {

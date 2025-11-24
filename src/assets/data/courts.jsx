@@ -1,17 +1,17 @@
 const courts = [
   {
     id: 5,
-    url: "https://sampras-sp.s3.sa-east-1.amazonaws.com/hls/quadra5/master.m3u8",
+    url: "https://www.youtube.com/embed/ZwKFWDCl5l4?si=yc344YLgk_-Toi3E",
     thumb: "https://github.com/user-attachments/assets/0c619eb8-4a70-48a2-b361-c4619d2c607b",
   },
   {
     id: 6,
-    url: "https://sampras-sp.s3.sa-east-1.amazonaws.com/hls/quadra6/master.m3u8",
+    url: "https://www.youtube.com/embed/fJ0S8bcXqD0?si=uuZ2vQpH6KNu9suc",
     thumb: "https://github.com/user-attachments/assets/0c619eb8-4a70-48a2-b361-c4619d2c607b",
   },
   {
     id: 8,
-    url: "https://sampras-sp.s3.sa-east-1.amazonaws.com/hls/quadra8/master.m3u8",
+    url: "https://www.youtube.com/embed/ZwKFWDCl5l4?si=yc344YLgk_-Toi3E",
     thumb: "https://github.com/user-attachments/assets/0c619eb8-4a70-48a2-b361-c4619d2c607b",
   },
 ];
