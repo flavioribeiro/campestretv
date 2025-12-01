@@ -9,6 +9,7 @@ import courts from "./assets/data/courts";
 import "./styles/index.scss";
 
 const App = () => {
+  console.log("setting up routes for courts");
   const navRoutes = courts.map((court) => (
     <Route
       key={`${court.id}`}
