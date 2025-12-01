@@ -4,15 +4,14 @@ import courts from "../assets/data/courts";
 
 const Content = ({ props }) => {
   const currentCourtId = props;
-  let currentCourt = null;
+
+  // set default court if no court is provided
+  let currentCourt = courts[0];
+
   for (const court of courts) {
     if (court.id === currentCourtId) {
       currentCourt = court;
     }
-  }
-
-  if (!currentCourt) {
-    currentCourt = courts[0];
   }
 
   return (
