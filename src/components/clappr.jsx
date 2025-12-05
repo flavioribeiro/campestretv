@@ -18,6 +18,7 @@ const Clappr = ({ url }) => {
                     plugins: [
                         MediaControl
                     ],
+                    mediacontrol: {seekbar: "#4bd573", buttons: "#FFFFFF"}
             }));
         }
     }, player);
