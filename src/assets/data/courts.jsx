@@ -1,13 +1,13 @@
 const courts = [
   {
     id: 6,
-    url: "https://www.youtube.com/embed/6huyrtpWmWo?si=umQMZ-f7hGRroxGE",
-    thumb: "https://i.ytimg.com/vi/6huyrtpWmWo/maxresdefault.jpg"
+    type: "youtube",
+    videoId: "6huyrtpWmWo",
   },
   {
     id: 5,
-    url: "https://www.youtube.com/embed/ezCRJzVB4Ds?si=xAyUWo5glkD-RZhF",
-    thumb: "https://i.ytimg.com/vi/ezCRJzVB4Ds/maxresdefault.jpg"
+    type: "youtube",
+    videoId: "ezCRJzVB4Ds",
   },
 ];
 

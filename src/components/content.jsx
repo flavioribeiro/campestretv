@@ -1,5 +1,6 @@
 import courts from "../assets/data/courts";
 import ShareButton from "./ShareButton";
+import YouTube from "./youtube";
 
 const Content = ({ props }) => {
   const currentCourtId = props;
@@ -17,12 +18,7 @@ const Content = ({ props }) => {
     <div className="main-content">
       <div className="container">
         <div className="player">
-        <iframe
-          src={currentCourt.url}
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-          referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen></iframe>
+          <YouTube videoId={currentCourt.videoId} />
           <div className="court-title">
             <h1>Quadra {currentCourt.id}</h1>
             <div className="share-icon">
