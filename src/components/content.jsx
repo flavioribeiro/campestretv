@@ -1,4 +1,4 @@
-import courts from "../assets/data/courts";
+import live from "../assets/data/live.json";
 import ShareButton from "./ShareButton";
 import YouTube from "./youtube";
 import Clappr from "./clappr";
@@ -7,9 +7,9 @@ const Content = ({ props }) => {
   const currentCourtId = props;
 
   // set default court if no court is provided
-  let currentCourt = courts[0];
+  let currentCourt = live[0];
 
-  for (const court of courts) {
+  for (const court of live) {
     if (court.id === currentCourtId) {
       currentCourt = court;
       break;
