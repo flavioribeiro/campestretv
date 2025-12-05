@@ -4,7 +4,6 @@ import NoThumbnail from "../assets/img/no-thumb.png";
 const CourtThumbnail = ({ court }) => {
   const getThumbnailUrl = () => {
     const timestamp = Date.now();
-    return NoThumbnail;
     if (court.type === "youtube") {
       return `https://i.ytimg.com/vi/${court.videoId}/maxresdefault.jpg?t=${timestamp}`;
     }

@@ -7,8 +7,8 @@ const YouTube = ({ videoId }) => {
             src={`https://www.youtube.com/embed/${videoId}`}
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen>
         </iframe>
     );
 };

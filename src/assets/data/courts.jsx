@@ -14,6 +14,11 @@ const courts = [
     type: "youtube",
     videoId: "Q-oyWkKbEQ4",
   },
+  // {
+  //   id: 1,
+  //   type: "hls",
+  //   url: "http://sampras-sp.s3.sa-east-1.amazonaws.com/hls/quadra8/master.m3u8",
+  // },
 ];
 
 export default courts;
