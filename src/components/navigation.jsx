@@ -1,13 +1,13 @@
 import { NavLink } from "react-router-dom";
 
-import courts from "../assets/data/courts";
+import live from "../assets/data/live.json";
 import CourtThumbnail from "./thumbnail";
 
 const Navigation = () => {
   return (
     <nav className="navigation">
       <ul>
-        {courts.sort((a, b) => a.id - b.id).map((court) => (
+        {live.sort((a, b) => a.id - b.id).map((court) => (
           <li key={court.id}>
             <NavLink to={`/quadra/${court.id}`}>
               <CourtThumbnail court={court} />

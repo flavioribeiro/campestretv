@@ -4,13 +4,13 @@ import Content from "./components/content";
 import Header from "./components/header";
 import Navigation from "./components/navigation";
 
-import courts from "./assets/data/courts";
+import live from "./assets/data/live.json";
 
 import "./styles/index.scss";
 
 const App = () => {
   console.log("setting up routes for courts");
-  const navRoutes = courts.map((court) => (
+  const navRoutes = live.map((court) => (
     <Route
       key={`${court.id}`}
       path={`quadra/${court.id}`}
