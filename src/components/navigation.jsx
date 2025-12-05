@@ -9,9 +9,9 @@ const Navigation = () => {
       <ul>
         {live.sort((a, b) => a.id - b.id).map((court) => (
           <li key={court.id}>
-            <NavLink to={`/quadra/${court.id}`}>
+            <NavLink to={`/live/${court.id}`}>
               <CourtThumbnail court={court} />
-              <h3>Quadra {court.id}</h3>
+              <h3>{court.title}</h3>
             </NavLink>
           </li>
         ))}

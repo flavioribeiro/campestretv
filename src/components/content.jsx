@@ -26,10 +26,10 @@ const Content = ({ props }) => {
             <Clappr url={currentCourt.url} />
           )}
           <div className="court-title">
-            <h1>Quadra {currentCourt.id}</h1>
+            <h1>{currentCourt.title}</h1>
             <div className="share-icon">
               <ShareButton
-                url={`${window.location.origin}/quadra/${currentCourt.id}`}
+                url={`${window.location.origin}/live/${currentCourt.id}`}
                 title={`Quadra ${currentCourt.id} - Campestre TV`}
               />
             </div>

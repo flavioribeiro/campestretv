@@ -13,7 +13,7 @@ const App = () => {
   const navRoutes = live.map((court) => (
     <Route
       key={`${court.id}`}
-      path={`quadra/${court.id}`}
+      path={`live/${court.id}`}
       element={<Content props={court.id} />}
     />
   ));
