@@ -6,7 +6,7 @@ const Navigation = () => {
   return (
     <nav className="navigation">
       <ul>
-        {courts.map((court) => (
+        {courts.sort((a, b) => a.id - b.id).map((court) => (
           <li key={court.id}>
             <NavLink to={`/quadra/${court.id}`}>
               {court.type === "youtube" ? <img src={`https://i.ytimg.com/vi/${court.videoId}/maxresdefault.jpg`} /> : <img src={court.thumb} />}
