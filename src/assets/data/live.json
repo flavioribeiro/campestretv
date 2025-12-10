@@ -2,6 +2,24 @@
   {
     "id": 5,
     "title": "Quadra 5",
+    "type": "youtube",
+    "videoId": "6DIbBnaKySI"
+  },
+  {
+    "id": 6,
+    "title": "Quadra 6",
+    "type": "youtube",
+    "videoId": "w04N-WpRr0E"
+  },
+  {
+    "id": 8,
+    "title": "Quadra 8",
+    "type": "youtube",
+    "videoId": "aJgqO61iW7E"
+  },
+  {
+    "id": 10,
+    "title": "Teste - Quadra 5",
     "type": "hls",
     "url": "https://sampras-sp.s3.sa-east-1.amazonaws.com/hostdime/dec10q5/master.m3u8"
   }
