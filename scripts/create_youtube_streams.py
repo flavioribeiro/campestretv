@@ -259,16 +259,16 @@ def construct_go2rtc_yaml(streams: list):
         f.write("streams:\n")
         for stream in streams:
             ingest_url = os.environ["QUADRA" + str(stream['court_id'])]
-            f.write(f"    quadra{stream['court_id']}: \"{ingest_url}\"\n")
+            f.write(f"  quadra{stream['court_id']}: \"{ingest_url}\"\n")
 
         f.write("\npublish:\n")
         for stream in streams:
-            f.write(f"    quadra{stream['court_id']}: \"{stream['ingest_url']}/{stream['stream_key']}\"\n")
+            f.write(f"  quadra{stream['court_id']}: \"{stream['ingest_url']}/{stream['stream_key']}\"\n")
 
         f.write("\nlog:\n")
-        f.write(f"    output: \"file\"\n")
-        f.write(f"    level: \"trace\"\n")
-        f.write(f"    format: \"json\"\n")
+        f.write(f"  output: \"file\"\n")
+        f.write(f"  level: \"trace\"\n")
+        f.write(f"  format: \"json\"\n")
 
     print(f"✓ Go2rtc YAML configuration saved to: {output_file}")
 
