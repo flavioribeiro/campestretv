@@ -4,5 +4,17 @@
     "title": "Quadra 5",
     "type": "kick",
     "videoId": "campestretv-quadra5"
+  },
+  {
+    "id": 6,
+    "title": "Quadra 6",
+    "type": "kick",
+    "videoId": "campestretv-quadra6"
+  },
+  {
+    "id": 8,
+    "title": "Quadra 8",
+    "type": "kick",
+    "videoId": "campestretv-quadra8"
   }
 ]
