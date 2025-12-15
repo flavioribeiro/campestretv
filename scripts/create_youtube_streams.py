@@ -15,6 +15,7 @@ Crontab example (run daily at 6 AM):
 0 6 * * * /usr/bin/python3 /path/to/create_youtube_streams.py
 """
 
+import os
 import json
 import pickle
 from datetime import datetime
@@ -249,6 +250,28 @@ def save_stream_info(streams: list):
     print(f"✓ Detailed stream info saved to: {detailed_file}")
 
 
+def construct_go2rtc_yaml(streams: list):
+    """
+    Construct a go2rtc YAML configuration for the streams.
+    """
+    output_file = SCRIPT_DIR / "go2rtc.yaml"
+    with open(output_file, "w") as f:
+        f.write("streams:\n")
+        for stream in streams:
+            ingest_url = os.environ["QUADRA" + str(stream['court_id'])]
+            f.write(f"    quadra{stream['court_id']}: \"{ingest_url}\"\n")
+
+        f.write("\npublish:\n")
+        for stream in streams:
+            f.write(f"    quadra{stream['court_id']}: \"{stream['ingest_url']}/{stream['stream_key']}\"\n")
+
+        f.write("\nlog:\n")
+        f.write(f"    output: \"file\"\n")
+        f.write(f"    level: \"trace\"\n")
+        f.write(f"    format: \"json\"\n")
+
+    print(f"✓ Go2rtc YAML configuration saved to: {output_file}")
+
 def main():
     """
     Main entry point for the script.
@@ -277,6 +300,7 @@ def main():
     # Save stream information
     if created_streams:
         save_stream_info(created_streams)
+        construct_go2rtc_yaml(created_streams)
 
     # Print summary
     print("\n" + "=" * 60)
