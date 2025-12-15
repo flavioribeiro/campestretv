@@ -2,6 +2,7 @@ import live from "../assets/data/live.json";
 import ShareButton from "./ShareButton";
 import YouTube from "./youtube";
 import Clappr from "./clappr";
+import Kick from "./kick";
 
 const Content = ({ props }) => {
   const currentCourtId = props;
@@ -22,6 +23,8 @@ const Content = ({ props }) => {
         <div className="player">
           { currentCourt.type === "youtube" ? (
             <YouTube videoId={currentCourt.videoId} />
+          ) : currentCourt.type === "kick" ? (
+            <Kick videoId={currentCourt.videoId} />
           ) : (
             <Clappr url={currentCourt.url} />
           )}
