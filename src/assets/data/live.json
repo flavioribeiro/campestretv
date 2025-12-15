@@ -2,19 +2,7 @@
   {
     "id": 5,
     "title": "Quadra 5",
-    "type": "youtube",
-    "videoId": "vj76LQXyoCs"
-  },
-  {
-    "id": 6,
-    "title": "Quadra 6",
-    "type": "youtube",
-    "videoId": "M-MdTZAzBsc"
-  },
-  {
-    "id": 8,
-    "title": "Quadra 8",
-    "type": "youtube",
-    "videoId": "lwabCeGttLQ"
+    "type": "kick",
+    "videoId": "campestretv-quadra5"
   }
 ]
