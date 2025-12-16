@@ -119,6 +119,7 @@ def create_live_broadcast(youtube, title: str, court_name: str) -> dict:
                 "enableAutoStop": True,   # Stop when stream ends
                 "latencyPreference": "low",
                 "enableDvr": True,
+                "enableEmbed": True,
                 "recordFromStart": True,
             },
         },
